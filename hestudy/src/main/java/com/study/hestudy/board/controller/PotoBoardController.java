@@ -14,7 +14,7 @@ public class PotoBoardController {
 	
 	public Logger log = LoggerFactory.getLogger(Controller.class);
 
-	// 게시판
+	// 사진게시판
 		@GetMapping("/potoBoardList")
 		public ModelAndView PotoBoardList() {
 			log.info("PotoBoardListController ###");

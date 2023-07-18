@@ -13,7 +13,7 @@ import lombok.extern.slf4j.Slf4j;
 public class BoardController {
 	
 	public Logger log = LoggerFactory.getLogger(Controller.class);
-	
+
 	// 게시판
 	@GetMapping("/boardList")
 	public ModelAndView BoardList() {

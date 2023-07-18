@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter //getter 메소드 생성 
 @Setter //setter 메소드 생성
-public class HeMemverVO {
+public class HeMemberVO {
 
 	private int member_num;  		// 회원 번호
 	private String member_id;		// 회원 아이디
