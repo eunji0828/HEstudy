@@ -10,14 +10,16 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>HE_site Main</title>
-    <link rel="stylesheet" href="resources/static/css/main/main.css"> 
+    <link rel="stylesheet" href="resources/static/css/main/boardWrite.css"> 
 </head>
 
 <body>
-    글쓰기
+    <div>
+        
+    </div>
 </body>
 
-<script type="text/script" src="js/main/main.js"></script>
+<script type="text/script" src="js/main/boardWrite.js"></script>
 <script>
 
 </script>

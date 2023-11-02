@@ -35,7 +35,7 @@
     </nav>
 
         <header>
-            <p>Hello!</p>
+            <p>eunji's project</p>
         </header>
 
         <div>
@@ -49,9 +49,9 @@
 
 <script type="text/script" src="js/main/main.js"></script>
 <script>
-    alert("ㅇㅇㅇ");
+
 // 스크롤 시 상단 메뉴바 
-let main_manu = document.querySelector('.main_manu');    // 메인메뉴
+let main_manu = document.querySelector('.main_manu');      // 메인메뉴
 let manu_font = document.querySelectorAll('.manu_font');   // 메인 a링크
 
 window.addEventListener("scroll", function(){

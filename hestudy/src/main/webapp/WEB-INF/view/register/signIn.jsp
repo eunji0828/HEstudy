@@ -10,11 +10,18 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>HE_site Main</title>
-    <link rel="stylesheet" href="resources/static/css/main/main.css"> 
+    <link rel="stylesheet" href="resources/static/css/main/signIn.css"> 
 </head>
 
 <body>
-    로그인
+    <container>
+        <p>ID</p>
+        <P>PW</P>
+
+        <button>로그인</button>
+        <button>아이디 찾기</button>
+        <button>비밀번호 찾기</button>
+    </container>
 </body>
 
 <script type="text/script" src="js/main/main.js"></script>
