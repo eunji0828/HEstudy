@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE  mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.hestudy.register.model.HeMemberMapperDAO">
+	
+	<!-- 회원가입 -->
+	<insert id="signUpInsert">
+		
+		INSERT INTO he_member (
+								member_id,
+								member_pw,
+								member_name,
+								member_nickName,
+								member_email,
+								member_phone,
+								member_address,
+								member_birth,
+								member_gender,
+								member_join,
+								)
+						VALUES
+								(
+								#{member_id},
+								#{member_pw},
+								#{member_name},
+								#{member_nickName},
+								#{member_email},
+								#{member_phone},
+								#{member_address},
+								#{member_birth},
+								#{member_gender},
+								#{member_join}
+								);
+		
+	</insert>
+
+	
+</mapper>

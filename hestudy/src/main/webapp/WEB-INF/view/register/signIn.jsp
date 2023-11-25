@@ -16,7 +16,10 @@
 <body>
     <container>
         <p>ID</p>
+        <input type="text">
+
         <P>PW</P>
+        <input type="password">
 
         <button>로그인</button>
         <button>아이디 찾기</button>

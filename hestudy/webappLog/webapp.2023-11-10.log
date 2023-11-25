@@ -1,0 +1,917 @@
+2023-11-10 15:11:47.376 INFO  151274960 --- [ http-nio-8888-exec-5 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:21:27.268 INFO  775  --- [ main ] c.study.hestudy.HestudyApplication - Starting HestudyApplication using Java 17.0.7 with PID 3668 (C:\develop\hestudy\HEstudy\hestudy\target\classes started by 82105 in C:\develop\hestudy\HEstudy\hestudy)
+2023-11-10 15:21:27.273 DEBUG 780  --- [ main ] c.study.hestudy.HestudyApplication - Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-11-10 15:21:27.275 INFO  782  --- [ main ] c.study.hestudy.HestudyApplication - No active profile set, falling back to 1 default profile: "default"
+2023-11-10 15:21:28.546 INFO  2053 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-11-10 15:21:28.556 INFO  2063 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:21:28.559 INFO  2066 --- [ main ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-11-10 15:21:28.559 INFO  2066 --- [ main ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-11-10 15:21:28.878 INFO  2385 --- [ main ] o.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-10 15:21:28.891 INFO  2398 --- [ main ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-11-10 15:21:28.891 INFO  2398 --- [ main ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1541 ms
+2023-11-10 15:21:29.218 INFO  2725 --- [ main ] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2023-11-10 15:21:29.266 DEBUG 2773 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.BoardController:
+	{GET [/boardList]}: BoardList()
+	{GET [/boardWrite]}: BoardWrite()
+2023-11-10 15:21:29.267 DEBUG 2774 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.PotoBoardController:
+	{GET [/potoBoardList]}: PotoBoardList()
+2023-11-10 15:21:29.267 DEBUG 2774 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.c.c.MainController:
+	{GET [/main || /]}: Main()
+2023-11-10 15:21:29.269 DEBUG 2776 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.r.c.registerController:
+	{GET [/signIn]}: SignIN()
+	{GET [/signUp]}: SignUp()
+2023-11-10 15:21:29.269 DEBUG 2776 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.SpringTestController:
+	{GET [/test]}: mvTest()
+	{GET [/index]}: test()
+2023-11-10 15:21:29.271 DEBUG 2778 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2023-11-10 15:21:29.281 DEBUG 2788 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+2023-11-10 15:21:29.297 DEBUG 2804 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /resources/static/**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-11-10 15:21:29.374 INFO  2881 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:21:29.425 INFO  2932 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-11-10 15:21:29.438 INFO  2945 --- [ main ] c.study.hestudy.HestudyApplication - Started HestudyApplication in 2.563 seconds (process running for 3.221)
+2023-11-10 15:23:03.799 INFO  97306 --- [ http-nio-8888-exec-1 ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-10 15:23:03.800 INFO  97307 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-11-10 15:23:03.803 INFO  97310 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-11-10 15:23:03.904 INFO  97411 --- [ http-nio-8888-exec-1 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:23:06.329 WARN  99836 --- [ http-nio-8888-exec-1 ] o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [192] milliseconds.
+2023-11-10 15:23:29.387 INFO  713  --- [ main ] c.study.hestudy.HestudyApplication - Starting HestudyApplication using Java 17.0.7 with PID 26900 (C:\develop\hestudy\HEstudy\hestudy\target\classes started by 82105 in C:\develop\hestudy\HEstudy\hestudy)
+2023-11-10 15:23:29.395 DEBUG 721  --- [ main ] c.study.hestudy.HestudyApplication - Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-11-10 15:23:29.400 INFO  726  --- [ main ] c.study.hestudy.HestudyApplication - No active profile set, falling back to 1 default profile: "default"
+2023-11-10 15:23:30.548 INFO  1874 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-11-10 15:23:30.560 INFO  1886 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:23:30.563 INFO  1889 --- [ main ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-11-10 15:23:30.563 INFO  1889 --- [ main ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-11-10 15:23:30.887 INFO  2213 --- [ main ] o.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-10 15:23:30.898 INFO  2224 --- [ main ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-11-10 15:23:30.899 INFO  2225 --- [ main ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1444 ms
+2023-11-10 15:23:31.149 INFO  2475 --- [ main ] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2023-11-10 15:23:31.195 DEBUG 2521 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.BoardController:
+	{GET [/boardWrite]}: BoardWrite()
+	{GET [/boardList]}: BoardList()
+2023-11-10 15:23:31.198 DEBUG 2524 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.PotoBoardController:
+	{GET [/potoBoardList]}: PotoBoardList()
+2023-11-10 15:23:31.199 DEBUG 2525 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.c.c.MainController:
+	{GET [/main || /]}: Main()
+2023-11-10 15:23:31.200 DEBUG 2526 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.r.c.registerController:
+	{GET [/signUp]}: SignUp()
+	{GET [/signIn]}: SignIN()
+2023-11-10 15:23:31.200 DEBUG 2526 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.SpringTestController:
+	{GET [/test]}: mvTest()
+	{GET [/index]}: test()
+2023-11-10 15:23:31.204 DEBUG 2530 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-11-10 15:23:31.214 DEBUG 2540 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+2023-11-10 15:23:31.232 DEBUG 2558 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /resources/static/**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-11-10 15:23:31.306 INFO  2632 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:23:31.317 WARN  2643 --- [ main ] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-11-10 15:23:31.323 INFO  2649 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:23:31.323 INFO  2649 --- [ main ] o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-11-10 15:23:31.347 INFO  2673 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:23:31.348 INFO  2674 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:23:31.354 INFO  2680 --- [ main ] o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-11-10 15:23:31.372 ERROR 2698 --- [ main ] o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8888 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8888 or configure this application to listen on another port.
+
+2023-11-10 15:23:44.721 INFO  732  --- [ main ] c.study.hestudy.HestudyApplication - Starting HestudyApplication using Java 17.0.7 with PID 6876 (C:\develop\hestudy\HEstudy\hestudy\target\classes started by 82105 in C:\develop\hestudy\HEstudy\hestudy)
+2023-11-10 15:23:44.723 DEBUG 734  --- [ main ] c.study.hestudy.HestudyApplication - Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-11-10 15:23:44.725 INFO  736  --- [ main ] c.study.hestudy.HestudyApplication - No active profile set, falling back to 1 default profile: "default"
+2023-11-10 15:23:45.909 INFO  1920 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-11-10 15:23:45.920 INFO  1931 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:23:45.924 INFO  1935 --- [ main ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-11-10 15:23:45.924 INFO  1935 --- [ main ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-11-10 15:23:46.289 INFO  2300 --- [ main ] o.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-10 15:23:46.303 INFO  2314 --- [ main ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-11-10 15:23:46.303 INFO  2314 --- [ main ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1522 ms
+2023-11-10 15:23:46.553 INFO  2564 --- [ main ] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2023-11-10 15:23:46.610 DEBUG 2621 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.BoardController:
+	{GET [/boardList]}: BoardList()
+	{GET [/boardWrite]}: BoardWrite()
+2023-11-10 15:23:46.613 DEBUG 2624 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.PotoBoardController:
+	{GET [/potoBoardList]}: PotoBoardList()
+2023-11-10 15:23:46.615 DEBUG 2626 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.c.c.MainController:
+	{GET [/main || /]}: Main()
+2023-11-10 15:23:46.615 DEBUG 2626 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.r.c.registerController:
+	{GET [/signIn]}: SignIN()
+	{GET [/signUp]}: SignUp()
+2023-11-10 15:23:46.616 DEBUG 2627 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.SpringTestController:
+	{GET [/index]}: test()
+	{GET [/test]}: mvTest()
+2023-11-10 15:23:46.620 DEBUG 2631 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-11-10 15:23:46.633 DEBUG 2644 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+2023-11-10 15:23:46.655 DEBUG 2666 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /resources/static/**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-11-10 15:23:46.739 INFO  2750 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:23:46.783 INFO  2794 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-11-10 15:23:46.794 INFO  2805 --- [ main ] c.study.hestudy.HestudyApplication - Started HestudyApplication in 2.426 seconds (process running for 3.058)
+2023-11-10 15:23:49.693 INFO  5704 --- [ http-nio-8888-exec-2 ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-10 15:23:49.693 INFO  5704 --- [ http-nio-8888-exec-2 ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-11-10 15:23:49.696 INFO  5707 --- [ http-nio-8888-exec-2 ] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-11-10 15:23:49.734 INFO  5745 --- [ http-nio-8888-exec-2 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:23:52.835 INFO  8846 --- [ http-nio-8888-exec-3 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:23:52.881 WARN  8892 --- [ http-nio-8888-exec-5 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:23:53.374 INFO  9385 --- [ http-nio-8888-exec-6 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:23:53.427 WARN  9438 --- [ http-nio-8888-exec-8 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:23:53.986 INFO  9997 --- [ http-nio-8888-exec-9 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:23:54.034 WARN  10045 --- [ http-nio-8888-exec-2 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:23:54.192 INFO  10203 --- [ http-nio-8888-exec-1 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:23:54.263 WARN  10274 --- [ http-nio-8888-exec-4 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:23:54.373 INFO  10384 --- [ http-nio-8888-exec-5 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:23:54.431 WARN  10442 --- [ http-nio-8888-exec-7 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:23:54.554 INFO  10565 --- [ http-nio-8888-exec-8 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:23:54.616 WARN  10627 --- [ http-nio-8888-exec-10 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:23:54.742 INFO  10753 --- [ http-nio-8888-exec-2 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:23:54.796 WARN  10807 --- [ http-nio-8888-exec-3 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:23:54.926 INFO  10937 --- [ http-nio-8888-exec-4 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:23:54.979 WARN  10990 --- [ http-nio-8888-exec-6 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:23:55.189 INFO  11200 --- [ http-nio-8888-exec-7 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:23:55.248 WARN  11259 --- [ http-nio-8888-exec-9 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:23:55.432 INFO  11443 --- [ http-nio-8888-exec-10 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:23:55.512 WARN  11523 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:23:55.656 INFO  11667 --- [ http-nio-8888-exec-3 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:23:55.719 WARN  11730 --- [ http-nio-8888-exec-5 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:23:55.926 INFO  11937 --- [ http-nio-8888-exec-6 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:23:55.973 WARN  11984 --- [ http-nio-8888-exec-8 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:24:25.030 INFO  731  --- [ main ] c.study.hestudy.HestudyApplication - Starting HestudyApplication using Java 17.0.7 with PID 20436 (C:\develop\hestudy\HEstudy\hestudy\target\classes started by 82105 in C:\develop\hestudy\HEstudy\hestudy)
+2023-11-10 15:24:25.033 DEBUG 734  --- [ main ] c.study.hestudy.HestudyApplication - Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-11-10 15:24:25.034 INFO  735  --- [ main ] c.study.hestudy.HestudyApplication - No active profile set, falling back to 1 default profile: "default"
+2023-11-10 15:24:26.268 INFO  1969 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-11-10 15:24:26.275 INFO  1976 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:24:26.277 INFO  1978 --- [ main ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-11-10 15:24:26.278 INFO  1979 --- [ main ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-11-10 15:24:26.608 INFO  2309 --- [ main ] o.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-10 15:24:26.622 INFO  2323 --- [ main ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-11-10 15:24:26.623 INFO  2324 --- [ main ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1527 ms
+2023-11-10 15:24:26.878 INFO  2579 --- [ main ] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2023-11-10 15:24:26.933 DEBUG 2634 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.BoardController:
+	{GET [/boardList]}: BoardList()
+	{GET [/boardWrite]}: BoardWrite()
+2023-11-10 15:24:26.935 DEBUG 2636 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.PotoBoardController:
+	{GET [/potoBoardList]}: PotoBoardList()
+2023-11-10 15:24:26.936 DEBUG 2637 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.c.c.MainController:
+	{GET [/main || /]}: Main()
+2023-11-10 15:24:26.937 DEBUG 2638 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.r.c.registerController:
+	{GET [/signIn]}: SignIN()
+	{GET [/signUp]}: SignUp()
+2023-11-10 15:24:26.937 DEBUG 2638 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.SpringTestController:
+	{GET [/index]}: test()
+	{GET [/test]}: mvTest()
+2023-11-10 15:24:26.939 DEBUG 2640 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-11-10 15:24:26.946 DEBUG 2647 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+2023-11-10 15:24:26.962 DEBUG 2663 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /resources/static/**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-11-10 15:24:27.018 INFO  2719 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:24:27.056 INFO  2757 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-11-10 15:24:27.070 INFO  2771 --- [ main ] c.study.hestudy.HestudyApplication - Started HestudyApplication in 2.411 seconds (process running for 3.037)
+2023-11-10 15:24:30.889 INFO  6590 --- [ http-nio-8888-exec-1 ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-10 15:24:30.889 INFO  6590 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-11-10 15:24:30.890 INFO  6591 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-11-10 15:24:30.931 INFO  6632 --- [ http-nio-8888-exec-1 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:24:31.862 WARN  7563 --- [ http-nio-8888-exec-3 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:24:33.016 INFO  8717 --- [ http-nio-8888-exec-4 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:24:33.064 WARN  8765 --- [ http-nio-8888-exec-6 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:24:34.081 INFO  9782 --- [ http-nio-8888-exec-7 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:24:34.126 WARN  9827 --- [ http-nio-8888-exec-9 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:24:34.573 INFO  10274 --- [ http-nio-8888-exec-10 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:24:34.629 WARN  10330 --- [ http-nio-8888-exec-2 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:24:34.954 INFO  10655 --- [ http-nio-8888-exec-3 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:24:35.004 WARN  10705 --- [ http-nio-8888-exec-5 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:25:14.046 INFO  49747 --- [ http-nio-8888-exec-6 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:25:14.100 WARN  49801 --- [ http-nio-8888-exec-8 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:25:15.042 INFO  50743 --- [ http-nio-8888-exec-9 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:25:15.088 WARN  50789 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:25:15.384 INFO  51085 --- [ http-nio-8888-exec-2 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:25:15.434 WARN  51135 --- [ http-nio-8888-exec-4 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:26:28.731 INFO  887  --- [ main ] c.study.hestudy.HestudyApplication - Starting HestudyApplication using Java 17.0.7 with PID 4240 (C:\develop\hestudy\HEstudy\hestudy\target\classes started by 82105 in C:\develop\hestudy\HEstudy\hestudy)
+2023-11-10 15:26:28.734 DEBUG 890  --- [ main ] c.study.hestudy.HestudyApplication - Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-11-10 15:26:28.735 INFO  891  --- [ main ] c.study.hestudy.HestudyApplication - No active profile set, falling back to 1 default profile: "default"
+2023-11-10 15:26:30.054 INFO  2210 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-11-10 15:26:30.063 INFO  2219 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:26:30.066 INFO  2222 --- [ main ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-11-10 15:26:30.066 INFO  2222 --- [ main ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-11-10 15:26:30.420 INFO  2576 --- [ main ] o.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-10 15:26:30.433 INFO  2589 --- [ main ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-11-10 15:26:30.434 INFO  2590 --- [ main ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1619 ms
+2023-11-10 15:26:30.735 INFO  2891 --- [ main ] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2023-11-10 15:26:30.811 DEBUG 2967 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.BoardController:
+	{GET [/boardWrite]}: BoardWrite()
+	{GET [/boardList]}: BoardList()
+2023-11-10 15:26:30.813 DEBUG 2969 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.PotoBoardController:
+	{GET [/potoBoardList]}: PotoBoardList()
+2023-11-10 15:26:30.814 DEBUG 2970 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.c.c.MainController:
+	{GET [/main || /]}: Main()
+2023-11-10 15:26:30.815 DEBUG 2971 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.r.c.registerController:
+	{GET [/signIn]}: SignIN()
+	{GET [/signUp]}: SignUp()
+2023-11-10 15:26:30.815 DEBUG 2971 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.SpringTestController:
+	{GET [/index]}: test()
+	{GET [/test]}: mvTest()
+2023-11-10 15:26:30.819 DEBUG 2975 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-11-10 15:26:30.831 DEBUG 2987 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+2023-11-10 15:26:30.850 DEBUG 3006 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /resources/static/**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-11-10 15:26:30.935 INFO  3091 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:26:30.981 INFO  3137 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-11-10 15:26:30.993 INFO  3149 --- [ main ] c.study.hestudy.HestudyApplication - Started HestudyApplication in 2.726 seconds (process running for 3.456)
+2023-11-10 15:26:42.443 INFO  14599 --- [ http-nio-8888-exec-1 ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-10 15:26:42.444 INFO  14600 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-11-10 15:26:42.447 INFO  14603 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-11-10 15:26:42.541 INFO  14697 --- [ http-nio-8888-exec-1 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:26:44.977 WARN  17133 --- [ http-nio-8888-exec-1 ] o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [167] milliseconds.
+2023-11-10 15:27:47.387 INFO  852  --- [ main ] c.study.hestudy.HestudyApplication - Starting HestudyApplication using Java 17.0.7 with PID 18344 (C:\develop\hestudy\HEstudy\hestudy\target\classes started by 82105 in C:\develop\hestudy\HEstudy\hestudy)
+2023-11-10 15:27:47.389 DEBUG 854  --- [ main ] c.study.hestudy.HestudyApplication - Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-11-10 15:27:47.390 INFO  855  --- [ main ] c.study.hestudy.HestudyApplication - No active profile set, falling back to 1 default profile: "default"
+2023-11-10 15:27:48.780 INFO  2245 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-11-10 15:27:48.790 INFO  2255 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:27:48.794 INFO  2259 --- [ main ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-11-10 15:27:48.795 INFO  2260 --- [ main ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-11-10 15:27:49.168 INFO  2633 --- [ main ] o.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-10 15:27:49.183 INFO  2648 --- [ main ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-11-10 15:27:49.184 INFO  2649 --- [ main ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1716 ms
+2023-11-10 15:27:49.541 INFO  3006 --- [ main ] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2023-11-10 15:27:49.606 DEBUG 3071 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.BoardController:
+	{GET [/boardList]}: BoardList()
+	{GET [/boardWrite]}: BoardWrite()
+2023-11-10 15:27:49.611 DEBUG 3076 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.PotoBoardController:
+	{GET [/potoBoardList]}: PotoBoardList()
+2023-11-10 15:27:49.613 DEBUG 3078 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.c.c.MainController:
+	{GET [/main || /]}: Main()
+2023-11-10 15:27:49.613 DEBUG 3078 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.r.c.registerController:
+	{GET [/signUp]}: SignUp()
+	{GET [/signIn]}: SignIN()
+2023-11-10 15:27:49.614 DEBUG 3079 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.SpringTestController:
+	{GET [/index]}: test()
+	{GET [/test]}: mvTest()
+2023-11-10 15:27:49.618 DEBUG 3083 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-11-10 15:27:49.632 DEBUG 3097 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+2023-11-10 15:27:49.654 DEBUG 3119 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /resources/static/**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-11-10 15:27:49.733 INFO  3198 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:27:49.787 INFO  3252 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-11-10 15:27:49.799 INFO  3264 --- [ main ] c.study.hestudy.HestudyApplication - Started HestudyApplication in 2.857 seconds (process running for 3.524)
+2023-11-10 15:27:56.860 INFO  10325 --- [ http-nio-8888-exec-1 ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-10 15:27:56.862 INFO  10327 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-11-10 15:27:56.864 INFO  10329 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-11-10 15:27:56.952 INFO  10417 --- [ http-nio-8888-exec-1 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:27:59.497 WARN  12962 --- [ http-nio-8888-exec-1 ] o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [196] milliseconds.
+2023-11-10 15:28:59.489 INFO  72954 --- [ http-nio-8888-exec-5 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:28:59.555 WARN  73020 --- [ http-nio-8888-exec-7 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:29:00.607 INFO  74072 --- [ http-nio-8888-exec-8 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:29:00.664 WARN  74129 --- [ http-nio-8888-exec-10 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:29:07.259 INFO  80724 --- [ http-nio-8888-exec-1 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:29:07.309 WARN  80774 --- [ http-nio-8888-exec-4 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:29:08.199 INFO  81664 --- [ http-nio-8888-exec-3 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:29:08.273 WARN  81738 --- [ http-nio-8888-exec-6 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:29:24.805 INFO  98270 --- [ http-nio-8888-exec-7 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:29:24.863 WARN  98328 --- [ http-nio-8888-exec-9 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:30:01.431 INFO  134896 --- [ http-nio-8888-exec-1 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:30:01.502 WARN  134967 --- [ http-nio-8888-exec-4 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:30:13.379 INFO  146844 --- [ http-nio-8888-exec-3 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:30:13.439 WARN  146904 --- [ http-nio-8888-exec-6 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:30:36.104 INFO  169569 --- [ http-nio-8888-exec-7 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:30:36.179 WARN  169644 --- [ http-nio-8888-exec-9 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:30:40.515 INFO  173980 --- [ http-nio-8888-exec-10 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:30:40.564 WARN  174029 --- [ http-nio-8888-exec-2 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:30:49.474 INFO  182939 --- [ http-nio-8888-exec-4 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:30:49.540 WARN  183005 --- [ http-nio-8888-exec-5 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:31:18.410 INFO  211875 --- [ http-nio-8888-exec-7 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:31:18.470 WARN  211935 --- [ http-nio-8888-exec-9 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:31:54.717 INFO  248182 --- [ http-nio-8888-exec-10 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:31:54.771 WARN  248236 --- [ http-nio-8888-exec-2 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:32:08.538 INFO  262003 --- [ http-nio-8888-exec-4 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:32:08.597 WARN  262062 --- [ http-nio-8888-exec-5 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:32:47.846 INFO  301311 --- [ http-nio-8888-exec-7 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:32:47.905 WARN  301370 --- [ http-nio-8888-exec-9 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:32:54.791 INFO  308256 --- [ http-nio-8888-exec-10 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:32:54.834 WARN  308299 --- [ http-nio-8888-exec-2 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:33:06.640 INFO  320105 --- [ http-nio-8888-exec-4 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:33:06.697 WARN  320162 --- [ http-nio-8888-exec-5 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:33:33.720 INFO  347185 --- [ http-nio-8888-exec-6 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:33:33.775 WARN  347240 --- [ http-nio-8888-exec-8 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:33:34.602 INFO  348067 --- [ http-nio-8888-exec-9 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:33:34.654 WARN  348119 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:35:09.791 INFO  849  --- [ main ] c.study.hestudy.HestudyApplication - Starting HestudyApplication using Java 17.0.7 with PID 9280 (C:\develop\hestudy\HEstudy\hestudy\target\classes started by 82105 in C:\develop\hestudy\HEstudy\hestudy)
+2023-11-10 15:35:09.793 DEBUG 851  --- [ main ] c.study.hestudy.HestudyApplication - Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-11-10 15:35:09.794 INFO  852  --- [ main ] c.study.hestudy.HestudyApplication - No active profile set, falling back to 1 default profile: "default"
+2023-11-10 15:35:11.256 INFO  2314 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-11-10 15:35:11.266 INFO  2324 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:35:11.269 INFO  2327 --- [ main ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-11-10 15:35:11.269 INFO  2327 --- [ main ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-11-10 15:35:11.639 INFO  2697 --- [ main ] o.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-10 15:35:11.651 INFO  2709 --- [ main ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-11-10 15:35:11.652 INFO  2710 --- [ main ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1795 ms
+2023-11-10 15:35:11.962 INFO  3020 --- [ main ] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2023-11-10 15:35:12.030 DEBUG 3088 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.BoardController:
+	{GET [/boardList]}: BoardList()
+	{GET [/boardWrite]}: BoardWrite()
+2023-11-10 15:35:12.032 DEBUG 3090 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.PotoBoardController:
+	{GET [/potoBoardList]}: PotoBoardList()
+2023-11-10 15:35:12.033 DEBUG 3091 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.c.c.MainController:
+	{GET [/main || /]}: Main()
+2023-11-10 15:35:12.033 DEBUG 3091 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.r.c.registerController:
+	{GET [/signUp]}: SignUp()
+	{GET [/signIn]}: SignIN()
+2023-11-10 15:35:12.034 DEBUG 3092 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.SpringTestController:
+	{GET [/index]}: test()
+	{GET [/test]}: mvTest()
+2023-11-10 15:35:12.037 DEBUG 3095 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-11-10 15:35:12.047 DEBUG 3105 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+2023-11-10 15:35:12.060 DEBUG 3118 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /resources/static/**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-11-10 15:35:12.130 INFO  3188 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:35:12.172 INFO  3230 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-11-10 15:35:12.181 INFO  3239 --- [ main ] c.study.hestudy.HestudyApplication - Started HestudyApplication in 2.762 seconds (process running for 3.511)
+2023-11-10 15:35:17.096 INFO  8154 --- [ http-nio-8888-exec-1 ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-10 15:35:17.097 INFO  8155 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-11-10 15:35:17.101 INFO  8159 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2023-11-10 15:35:17.199 INFO  8257 --- [ http-nio-8888-exec-1 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:35:19.401 WARN  10459 --- [ http-nio-8888-exec-1 ] o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [165] milliseconds.
+2023-11-10 15:36:31.427 INFO  812  --- [ main ] c.study.hestudy.HestudyApplication - Starting HestudyApplication using Java 17.0.7 with PID 13380 (C:\develop\hestudy\HEstudy\hestudy\target\classes started by 82105 in C:\develop\hestudy\HEstudy\hestudy)
+2023-11-10 15:36:31.431 DEBUG 816  --- [ main ] c.study.hestudy.HestudyApplication - Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-11-10 15:36:31.431 INFO  816  --- [ main ] c.study.hestudy.HestudyApplication - No active profile set, falling back to 1 default profile: "default"
+2023-11-10 15:36:32.638 INFO  2023 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-11-10 15:36:32.648 INFO  2033 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:36:32.650 INFO  2035 --- [ main ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-11-10 15:36:32.650 INFO  2035 --- [ main ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-11-10 15:36:33.088 INFO  2473 --- [ main ] o.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-10 15:36:33.108 INFO  2493 --- [ main ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-11-10 15:36:33.108 INFO  2493 --- [ main ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1611 ms
+2023-11-10 15:36:33.441 INFO  2826 --- [ main ] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2023-11-10 15:36:33.504 DEBUG 2889 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.BoardController:
+	{GET [/boardWrite]}: BoardWrite()
+	{GET [/boardList]}: BoardList()
+2023-11-10 15:36:33.507 DEBUG 2892 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.PotoBoardController:
+	{GET [/potoBoardList]}: PotoBoardList()
+2023-11-10 15:36:33.508 DEBUG 2893 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.c.c.MainController:
+	{GET [/main || /]}: Main()
+2023-11-10 15:36:33.511 DEBUG 2896 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.r.c.registerController:
+	{GET [/signIn]}: SignIN()
+	{GET [/signUp]}: SignUp()
+2023-11-10 15:36:33.512 DEBUG 2897 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.SpringTestController:
+	{GET [/index]}: test()
+	{GET [/test]}: mvTest()
+2023-11-10 15:36:33.518 DEBUG 2903 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-11-10 15:36:33.530 DEBUG 2915 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+2023-11-10 15:36:33.546 DEBUG 2931 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /resources/static/**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-11-10 15:36:33.617 INFO  3002 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:36:33.666 INFO  3051 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-11-10 15:36:33.677 INFO  3062 --- [ main ] c.study.hestudy.HestudyApplication - Started HestudyApplication in 2.68 seconds (process running for 3.333)
+2023-11-10 15:37:10.198 INFO  39583 --- [ http-nio-8888-exec-1 ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-10 15:37:10.199 INFO  39584 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-11-10 15:37:10.203 INFO  39588 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-11-10 15:37:10.290 INFO  39675 --- [ http-nio-8888-exec-1 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:37:12.621 WARN  42006 --- [ http-nio-8888-exec-1 ] o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [167] milliseconds.
+2023-11-10 15:37:20.823 INFO  50208 --- [ http-nio-8888-exec-3 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:37:20.879 WARN  50264 --- [ http-nio-8888-exec-5 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:37:25.483 INFO  54868 --- [ http-nio-8888-exec-6 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:37:25.532 WARN  54917 --- [ http-nio-8888-exec-8 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:37:40.851 INFO  70236 --- [ http-nio-8888-exec-9 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:37:40.910 WARN  70295 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:37:49.486 INFO  78871 --- [ http-nio-8888-exec-2 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:37:49.535 WARN  78920 --- [ http-nio-8888-exec-4 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:38:00.764 INFO  90149 --- [ http-nio-8888-exec-5 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:38:00.833 WARN  90218 --- [ http-nio-8888-exec-7 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:39:17.473 INFO  751  --- [ main ] c.study.hestudy.HestudyApplication - Starting HestudyApplication using Java 17.0.7 with PID 27840 (C:\develop\hestudy\HEstudy\hestudy\target\classes started by 82105 in C:\develop\hestudy\HEstudy\hestudy)
+2023-11-10 15:39:17.477 DEBUG 755  --- [ main ] c.study.hestudy.HestudyApplication - Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-11-10 15:39:17.478 INFO  756  --- [ main ] c.study.hestudy.HestudyApplication - No active profile set, falling back to 1 default profile: "default"
+2023-11-10 15:39:18.599 INFO  1877 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-11-10 15:39:18.611 INFO  1889 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:39:18.613 INFO  1891 --- [ main ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-11-10 15:39:18.613 INFO  1891 --- [ main ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-11-10 15:39:18.942 INFO  2220 --- [ main ] o.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-10 15:39:18.954 INFO  2232 --- [ main ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-11-10 15:39:18.954 INFO  2232 --- [ main ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1419 ms
+2023-11-10 15:39:19.182 INFO  2460 --- [ main ] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2023-11-10 15:39:19.233 DEBUG 2511 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.BoardController:
+	{GET [/boardList]}: BoardList()
+	{GET [/boardWrite]}: BoardWrite()
+2023-11-10 15:39:19.234 DEBUG 2512 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.PotoBoardController:
+	{GET [/potoBoardList]}: PotoBoardList()
+2023-11-10 15:39:19.235 DEBUG 2513 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.c.c.MainController:
+	{GET [/main || /]}: Main()
+2023-11-10 15:39:19.236 DEBUG 2514 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.r.c.registerController:
+	{GET [/signIn]}: SignIN()
+	{GET [/signUp]}: SignUp()
+2023-11-10 15:39:19.236 DEBUG 2514 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.SpringTestController:
+	{GET [/index]}: test()
+	{GET [/test]}: mvTest()
+2023-11-10 15:39:19.240 DEBUG 2518 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-11-10 15:39:19.250 DEBUG 2528 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+2023-11-10 15:39:19.267 DEBUG 2545 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /resources/static/**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-11-10 15:39:19.333 INFO  2611 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:39:19.372 INFO  2650 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-11-10 15:39:19.385 INFO  2663 --- [ main ] c.study.hestudy.HestudyApplication - Started HestudyApplication in 2.269 seconds (process running for 2.945)
+2023-11-10 15:39:28.465 INFO  11743 --- [ http-nio-8888-exec-2 ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-10 15:39:28.465 INFO  11743 --- [ http-nio-8888-exec-2 ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-11-10 15:39:28.467 INFO  11745 --- [ http-nio-8888-exec-2 ] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-11-10 15:39:28.503 INFO  11781 --- [ http-nio-8888-exec-2 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:39:29.316 WARN  12594 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:39:37.410 INFO  20688 --- [ http-nio-8888-exec-4 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:39:37.462 WARN  20740 --- [ http-nio-8888-exec-6 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:40:51.911 INFO  874  --- [ main ] c.study.hestudy.HestudyApplication - Starting HestudyApplication using Java 17.0.7 with PID 29548 (C:\develop\hestudy\HEstudy\hestudy\target\classes started by 82105 in C:\develop\hestudy\HEstudy\hestudy)
+2023-11-10 15:40:51.916 DEBUG 879  --- [ main ] c.study.hestudy.HestudyApplication - Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-11-10 15:40:51.918 INFO  881  --- [ main ] c.study.hestudy.HestudyApplication - No active profile set, falling back to 1 default profile: "default"
+2023-11-10 15:40:53.313 INFO  2276 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-11-10 15:40:53.323 INFO  2286 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:40:53.326 INFO  2289 --- [ main ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-11-10 15:40:53.327 INFO  2290 --- [ main ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-11-10 15:40:53.717 INFO  2680 --- [ main ] o.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-10 15:40:53.733 INFO  2696 --- [ main ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-11-10 15:40:53.734 INFO  2697 --- [ main ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1736 ms
+2023-11-10 15:40:54.038 INFO  3001 --- [ main ] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2023-11-10 15:40:54.101 DEBUG 3064 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.BoardController:
+	{GET [/boardList]}: BoardList()
+	{GET [/boardWrite]}: BoardWrite()
+2023-11-10 15:40:54.102 DEBUG 3065 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.PotoBoardController:
+	{GET [/potoBoardList]}: PotoBoardList()
+2023-11-10 15:40:54.104 DEBUG 3067 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.c.c.MainController:
+	{GET [/main || /]}: Main()
+2023-11-10 15:40:54.104 DEBUG 3067 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.r.c.registerController:
+	{GET [/signUp]}: SignUp()
+	{GET [/signIn]}: SignIN()
+2023-11-10 15:40:54.104 DEBUG 3067 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.SpringTestController:
+	{GET [/test]}: mvTest()
+	{GET [/index]}: test()
+2023-11-10 15:40:54.107 DEBUG 3070 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-11-10 15:40:54.114 DEBUG 3077 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+2023-11-10 15:40:54.131 DEBUG 3094 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /resources/static/**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-11-10 15:40:54.203 INFO  3166 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:40:54.249 INFO  3212 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-11-10 15:40:54.263 INFO  3226 --- [ main ] c.study.hestudy.HestudyApplication - Started HestudyApplication in 2.784 seconds (process running for 3.517)
+2023-11-10 15:40:58.482 INFO  7445 --- [ http-nio-8888-exec-1 ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-10 15:40:58.483 INFO  7446 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-11-10 15:40:58.484 INFO  7447 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-11-10 15:40:58.520 INFO  7483 --- [ http-nio-8888-exec-1 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:41:00.330 WARN  9293 --- [ http-nio-8888-exec-1 ] o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [176] milliseconds.
+2023-11-10 15:41:00.420 WARN  9383 --- [ http-nio-8888-exec-3 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:41:04.754 INFO  13717 --- [ http-nio-8888-exec-5 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:41:04.803 WARN  13766 --- [ http-nio-8888-exec-6 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:41:05.233 INFO  14196 --- [ http-nio-8888-exec-7 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:41:05.289 WARN  14252 --- [ http-nio-8888-exec-9 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:41:05.530 INFO  14493 --- [ http-nio-8888-exec-10 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:41:05.605 WARN  14568 --- [ http-nio-8888-exec-2 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:41:05.755 INFO  14718 --- [ http-nio-8888-exec-3 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:41:05.836 WARN  14799 --- [ http-nio-8888-exec-4 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:41:05.970 INFO  14933 --- [ http-nio-8888-exec-6 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:41:06.036 WARN  14999 --- [ http-nio-8888-exec-8 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:41:06.178 INFO  15141 --- [ http-nio-8888-exec-9 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:41:06.226 WARN  15189 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:41:06.379 INFO  15342 --- [ http-nio-8888-exec-2 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:41:06.428 WARN  15391 --- [ http-nio-8888-exec-5 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:41:38.841 INFO  47804 --- [ http-nio-8888-exec-4 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:41:38.892 WARN  47855 --- [ http-nio-8888-exec-7 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:42:41.547 INFO  110510 --- [ http-nio-8888-exec-10 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:42:41.614 WARN  110577 --- [ http-nio-8888-exec-2 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:42:42.532 INFO  111495 --- [ http-nio-8888-exec-3 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:42:42.587 WARN  111550 --- [ http-nio-8888-exec-4 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:42:42.909 INFO  111872 --- [ http-nio-8888-exec-6 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:42:42.961 WARN  111924 --- [ http-nio-8888-exec-8 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:42:51.287 INFO  120250 --- [ http-nio-8888-exec-9 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:42:51.340 WARN  120303 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:42:51.950 INFO  120913 --- [ http-nio-8888-exec-2 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:42:52.020 WARN  120983 --- [ http-nio-8888-exec-5 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:42:52.244 INFO  121207 --- [ http-nio-8888-exec-4 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:42:52.293 WARN  121256 --- [ http-nio-8888-exec-7 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:42:52.486 INFO  121449 --- [ http-nio-8888-exec-8 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:42:52.532 WARN  121495 --- [ http-nio-8888-exec-10 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:42:52.732 INFO  121695 --- [ http-nio-8888-exec-1 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:42:52.781 WARN  121744 --- [ http-nio-8888-exec-3 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:45:06.461 INFO  255424 --- [ http-nio-8888-exec-7 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:45:06.527 WARN  255490 --- [ http-nio-8888-exec-9 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:45:07.442 INFO  256405 --- [ http-nio-8888-exec-10 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:45:07.496 WARN  256459 --- [ http-nio-8888-exec-2 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:45:07.967 INFO  256930 --- [ http-nio-8888-exec-3 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:45:08.017 WARN  256980 --- [ http-nio-8888-exec-4 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:45:08.325 INFO  257288 --- [ http-nio-8888-exec-6 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:45:08.380 WARN  257343 --- [ http-nio-8888-exec-8 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:45:36.265 INFO  285228 --- [ http-nio-8888-exec-10 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:45:36.317 WARN  285280 --- [ http-nio-8888-exec-2 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:45:36.982 INFO  285945 --- [ http-nio-8888-exec-3 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:45:37.027 WARN  285990 --- [ http-nio-8888-exec-4 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:45:37.302 INFO  286265 --- [ http-nio-8888-exec-6 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:45:37.355 WARN  286318 --- [ http-nio-8888-exec-8 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:46:45.079 INFO  354042 --- [ http-nio-8888-exec-1 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:46:45.143 WARN  354106 --- [ http-nio-8888-exec-3 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:46:46.035 INFO  354998 --- [ http-nio-8888-exec-5 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:46:46.091 WARN  355054 --- [ http-nio-8888-exec-6 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:46:46.397 INFO  355360 --- [ http-nio-8888-exec-7 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:46:46.441 WARN  355404 --- [ http-nio-8888-exec-9 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:46:46.791 INFO  355754 --- [ http-nio-8888-exec-10 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:46:46.835 WARN  355798 --- [ http-nio-8888-exec-2 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:46:53.720 INFO  834  --- [ main ] c.study.hestudy.HestudyApplication - Starting HestudyApplication using Java 17.0.7 with PID 14440 (C:\develop\hestudy\HEstudy\hestudy\target\classes started by 82105 in C:\develop\hestudy\HEstudy\hestudy)
+2023-11-10 15:46:53.726 DEBUG 840  --- [ main ] c.study.hestudy.HestudyApplication - Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-11-10 15:46:53.727 INFO  841  --- [ main ] c.study.hestudy.HestudyApplication - No active profile set, falling back to 1 default profile: "default"
+2023-11-10 15:46:54.956 INFO  2070 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-11-10 15:46:54.965 INFO  2079 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:46:54.968 INFO  2082 --- [ main ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-11-10 15:46:54.969 INFO  2083 --- [ main ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-11-10 15:46:55.307 INFO  2421 --- [ main ] o.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-10 15:46:55.321 INFO  2435 --- [ main ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-11-10 15:46:55.322 INFO  2436 --- [ main ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1497 ms
+2023-11-10 15:46:55.602 INFO  2716 --- [ main ] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2023-11-10 15:46:55.653 DEBUG 2767 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.BoardController:
+	{GET [/boardList]}: BoardList()
+	{GET [/boardWrite]}: BoardWrite()
+2023-11-10 15:46:55.655 DEBUG 2769 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.PotoBoardController:
+	{GET [/potoBoardList]}: PotoBoardList()
+2023-11-10 15:46:55.656 DEBUG 2770 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.c.c.MainController:
+	{GET [/main || /]}: Main()
+2023-11-10 15:46:55.656 DEBUG 2770 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.r.c.registerController:
+	{GET [/signIn]}: SignIN()
+	{GET [/signUp]}: SignUp()
+2023-11-10 15:46:55.657 DEBUG 2771 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.SpringTestController:
+	{GET [/index]}: test()
+	{GET [/test]}: mvTest()
+2023-11-10 15:46:55.660 DEBUG 2774 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-11-10 15:46:55.668 DEBUG 2782 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+2023-11-10 15:46:55.686 DEBUG 2800 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /resources/static/**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-11-10 15:46:55.763 INFO  2877 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:46:55.812 INFO  2926 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-11-10 15:46:55.823 INFO  2937 --- [ main ] c.study.hestudy.HestudyApplication - Started HestudyApplication in 2.537 seconds (process running for 3.23)
+2023-11-10 15:47:09.922 INFO  17036 --- [ http-nio-8888-exec-1 ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-10 15:47:09.923 INFO  17037 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-11-10 15:47:09.924 INFO  17038 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-11-10 15:47:09.968 INFO  17082 --- [ http-nio-8888-exec-1 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:47:10.780 WARN  17894 --- [ http-nio-8888-exec-3 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:47:33.541 INFO  40655 --- [ http-nio-8888-exec-4 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:47:33.600 WARN  40714 --- [ http-nio-8888-exec-6 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:47:34.402 INFO  41516 --- [ http-nio-8888-exec-7 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:47:34.452 WARN  41566 --- [ http-nio-8888-exec-9 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:47:42.955 INFO  50069 --- [ http-nio-8888-exec-10 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:47:43.015 WARN  50129 --- [ http-nio-8888-exec-2 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:48:19.848 INFO  801  --- [ main ] c.study.hestudy.HestudyApplication - Starting HestudyApplication using Java 17.0.7 with PID 24396 (C:\develop\hestudy\HEstudy\hestudy\target\classes started by 82105 in C:\develop\hestudy\HEstudy\hestudy)
+2023-11-10 15:48:19.854 DEBUG 807  --- [ main ] c.study.hestudy.HestudyApplication - Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-11-10 15:48:19.855 INFO  808  --- [ main ] c.study.hestudy.HestudyApplication - No active profile set, falling back to 1 default profile: "default"
+2023-11-10 15:48:20.958 INFO  1911 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-11-10 15:48:20.969 INFO  1922 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:48:20.971 INFO  1924 --- [ main ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-11-10 15:48:20.972 INFO  1925 --- [ main ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-11-10 15:48:21.292 INFO  2245 --- [ main ] o.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-10 15:48:21.303 INFO  2256 --- [ main ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-11-10 15:48:21.304 INFO  2257 --- [ main ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1392 ms
+2023-11-10 15:48:21.534 INFO  2487 --- [ main ] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2023-11-10 15:48:21.584 DEBUG 2537 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.BoardController:
+	{GET [/boardList]}: BoardList()
+	{GET [/boardWrite]}: BoardWrite()
+2023-11-10 15:48:21.586 DEBUG 2539 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.PotoBoardController:
+	{GET [/potoBoardList]}: PotoBoardList()
+2023-11-10 15:48:21.586 DEBUG 2539 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.c.c.MainController:
+	{GET [/main || /]}: Main()
+2023-11-10 15:48:21.587 DEBUG 2540 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.r.c.registerController:
+	{GET [/signIn]}: SignIN()
+	{GET [/signUp]}: SignUp()
+2023-11-10 15:48:21.587 DEBUG 2540 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.SpringTestController:
+	{GET [/index]}: test()
+	{GET [/test]}: mvTest()
+2023-11-10 15:48:21.591 DEBUG 2544 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-11-10 15:48:21.598 DEBUG 2551 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+2023-11-10 15:48:21.618 DEBUG 2571 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /resources/static/**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-11-10 15:48:21.674 INFO  2627 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:48:21.720 INFO  2673 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-11-10 15:48:21.731 INFO  2684 --- [ main ] c.study.hestudy.HestudyApplication - Started HestudyApplication in 2.268 seconds (process running for 2.967)
+2023-11-10 15:48:35.085 INFO  16038 --- [ http-nio-8888-exec-2 ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-10 15:48:35.086 INFO  16039 --- [ http-nio-8888-exec-2 ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-11-10 15:48:35.089 INFO  16042 --- [ http-nio-8888-exec-2 ] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-11-10 15:48:35.181 INFO  16134 --- [ http-nio-8888-exec-2 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:48:37.439 WARN  18392 --- [ http-nio-8888-exec-2 ] o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [186] milliseconds.
+2023-11-10 15:57:09.104 INFO  817  --- [ main ] c.study.hestudy.HestudyApplication - Starting HestudyApplication using Java 17.0.7 with PID 16000 (C:\develop\hestudy\HEstudy\hestudy\target\classes started by 82105 in C:\develop\hestudy\HEstudy\hestudy)
+2023-11-10 15:57:09.106 DEBUG 819  --- [ main ] c.study.hestudy.HestudyApplication - Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-11-10 15:57:09.107 INFO  820  --- [ main ] c.study.hestudy.HestudyApplication - No active profile set, falling back to 1 default profile: "default"
+2023-11-10 15:57:10.326 INFO  2039 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-11-10 15:57:10.337 INFO  2050 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:57:10.340 INFO  2053 --- [ main ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-11-10 15:57:10.340 INFO  2053 --- [ main ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-11-10 15:57:10.644 INFO  2357 --- [ main ] o.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-10 15:57:10.657 INFO  2370 --- [ main ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-11-10 15:57:10.658 INFO  2371 --- [ main ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1482 ms
+2023-11-10 15:57:10.907 INFO  2620 --- [ main ] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2023-11-10 15:57:10.960 DEBUG 2673 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.BoardController:
+	{GET [/boardList]}: BoardList()
+	{GET [/boardWrite]}: BoardWrite()
+2023-11-10 15:57:10.962 DEBUG 2675 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.PotoBoardController:
+	{GET [/potoBoardList]}: PotoBoardList()
+2023-11-10 15:57:10.963 DEBUG 2676 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.c.c.MainController:
+	{GET [/main || /]}: Main()
+2023-11-10 15:57:10.963 DEBUG 2676 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.r.c.registerController:
+	{GET [/signIn]}: SignIN()
+	{GET [/signUp]}: SignUp()
+2023-11-10 15:57:10.964 DEBUG 2677 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.SpringTestController:
+	{GET [/index]}: test()
+	{GET [/test]}: mvTest()
+2023-11-10 15:57:10.967 DEBUG 2680 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-11-10 15:57:10.977 DEBUG 2690 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+2023-11-10 15:57:10.994 DEBUG 2707 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /resources/static/**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-11-10 15:57:11.062 INFO  2775 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-11-10 15:57:11.101 INFO  2814 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-11-10 15:57:11.111 INFO  2824 --- [ main ] c.study.hestudy.HestudyApplication - Started HestudyApplication in 2.424 seconds (process running for 3.124)
+2023-11-10 15:57:20.397 INFO  12110 --- [ http-nio-8888-exec-1 ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-10 15:57:20.397 INFO  12110 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-11-10 15:57:20.399 INFO  12112 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-11-10 15:57:20.436 INFO  12149 --- [ http-nio-8888-exec-1 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:57:21.286 WARN  12999 --- [ http-nio-8888-exec-3 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:57:52.994 INFO  44707 --- [ http-nio-8888-exec-4 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:57:53.062 WARN  44775 --- [ http-nio-8888-exec-6 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:57:59.183 INFO  50896 --- [ http-nio-8888-exec-7 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:57:59.232 WARN  50945 --- [ http-nio-8888-exec-9 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:58:11.617 INFO  63330 --- [ http-nio-8888-exec-2 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:58:11.676 WARN  63389 --- [ http-nio-8888-exec-4 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:58:30.683 INFO  82396 --- [ http-nio-8888-exec-7 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:58:30.739 WARN  82452 --- [ http-nio-8888-exec-9 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:58:58.547 INFO  110260 --- [ http-nio-8888-exec-1 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:58:58.607 WARN  110320 --- [ http-nio-8888-exec-2 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 15:59:14.956 INFO  126669 --- [ http-nio-8888-exec-3 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 15:59:15.016 WARN  126729 --- [ http-nio-8888-exec-6 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 16:00:24.351 INFO  878  --- [ main ] c.study.hestudy.HestudyApplication - Starting HestudyApplication using Java 17.0.7 with PID 12824 (C:\develop\hestudy\HEstudy\hestudy\target\classes started by 82105 in C:\develop\hestudy\HEstudy\hestudy)
+2023-11-10 16:00:24.353 DEBUG 880  --- [ main ] c.study.hestudy.HestudyApplication - Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-11-10 16:00:24.355 INFO  882  --- [ main ] c.study.hestudy.HestudyApplication - No active profile set, falling back to 1 default profile: "default"
+2023-11-10 16:00:25.608 INFO  2135 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-11-10 16:00:25.615 INFO  2142 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-11-10 16:00:25.618 INFO  2145 --- [ main ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-11-10 16:00:25.618 INFO  2145 --- [ main ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-11-10 16:00:25.943 INFO  2470 --- [ main ] o.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-10 16:00:25.955 INFO  2482 --- [ main ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-11-10 16:00:25.955 INFO  2482 --- [ main ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1537 ms
+2023-11-10 16:00:26.216 INFO  2743 --- [ main ] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2023-11-10 16:00:26.269 DEBUG 2796 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.BoardController:
+	{GET [/boardList]}: BoardList()
+	{GET [/boardWrite]}: BoardWrite()
+2023-11-10 16:00:26.272 DEBUG 2799 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.PotoBoardController:
+	{GET [/potoBoardList]}: PotoBoardList()
+2023-11-10 16:00:26.273 DEBUG 2800 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.c.c.MainController:
+	{GET [/main || /]}: Main()
+2023-11-10 16:00:26.274 DEBUG 2801 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.r.c.registerController:
+	{GET [/signIn]}: SignIN()
+	{GET [/signUp]}: SignUp()
+2023-11-10 16:00:26.275 DEBUG 2802 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.SpringTestController:
+	{GET [/index]}: test()
+	{GET [/test]}: mvTest()
+2023-11-10 16:00:26.280 DEBUG 2807 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-11-10 16:00:26.289 DEBUG 2816 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+2023-11-10 16:00:26.307 DEBUG 2834 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /resources/static/**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-11-10 16:00:26.359 INFO  2886 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-11-10 16:00:26.399 INFO  2926 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-11-10 16:00:26.408 INFO  2935 --- [ main ] c.study.hestudy.HestudyApplication - Started HestudyApplication in 2.493 seconds (process running for 3.224)
+2023-11-10 16:00:49.802 INFO  26329 --- [ http-nio-8888-exec-1 ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-10 16:00:49.802 INFO  26329 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-11-10 16:00:49.803 INFO  26330 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-11-10 16:00:49.845 INFO  26372 --- [ http-nio-8888-exec-1 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 16:00:50.660 WARN  27187 --- [ http-nio-8888-exec-3 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 16:01:10.629 INFO  47156 --- [ http-nio-8888-exec-4 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 16:01:10.702 WARN  47229 --- [ http-nio-8888-exec-6 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 16:01:38.385 INFO  74912 --- [ http-nio-8888-exec-7 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 16:01:38.457 WARN  74984 --- [ http-nio-8888-exec-9 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 16:01:56.144 INFO  92671 --- [ http-nio-8888-exec-1 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 16:01:56.205 WARN  92732 --- [ http-nio-8888-exec-3 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 16:05:13.118 INFO  820  --- [ main ] c.study.hestudy.HestudyApplication - Starting HestudyApplication using Java 17.0.7 with PID 22648 (C:\develop\hestudy\HEstudy\hestudy\target\classes started by 82105 in C:\develop\hestudy\HEstudy\hestudy)
+2023-11-10 16:05:13.124 DEBUG 826  --- [ main ] c.study.hestudy.HestudyApplication - Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-11-10 16:05:13.125 INFO  827  --- [ main ] c.study.hestudy.HestudyApplication - No active profile set, falling back to 1 default profile: "default"
+2023-11-10 16:05:14.355 INFO  2057 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-11-10 16:05:14.368 INFO  2070 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-11-10 16:05:14.371 INFO  2073 --- [ main ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-11-10 16:05:14.371 INFO  2073 --- [ main ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-11-10 16:05:14.791 INFO  2493 --- [ main ] o.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-10 16:05:14.804 INFO  2506 --- [ main ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-11-10 16:05:14.804 INFO  2506 --- [ main ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1623 ms
+2023-11-10 16:05:15.165 INFO  2867 --- [ main ] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2023-11-10 16:05:15.245 DEBUG 2947 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.BoardController:
+	{GET [/boardWrite]}: BoardWrite()
+	{GET [/boardList]}: BoardList()
+2023-11-10 16:05:15.249 DEBUG 2951 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.PotoBoardController:
+	{GET [/potoBoardList]}: PotoBoardList()
+2023-11-10 16:05:15.249 DEBUG 2951 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.c.c.MainController:
+	{GET [/main || /]}: Main()
+2023-11-10 16:05:15.251 DEBUG 2953 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.r.c.registerController:
+	{GET [/signUp]}: SignUp()
+	{GET [/signIn]}: SignIN()
+2023-11-10 16:05:15.254 DEBUG 2956 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.SpringTestController:
+	{GET [/index]}: test()
+	{GET [/test]}: mvTest()
+2023-11-10 16:05:15.258 DEBUG 2960 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-11-10 16:05:15.271 DEBUG 2973 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+2023-11-10 16:05:15.298 DEBUG 3000 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /resources/static/**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-11-10 16:05:15.388 INFO  3090 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-11-10 16:05:15.436 INFO  3138 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-11-10 16:05:15.448 INFO  3150 --- [ main ] c.study.hestudy.HestudyApplication - Started HestudyApplication in 2.738 seconds (process running for 3.401)
+2023-11-10 16:05:20.451 INFO  8153 --- [ http-nio-8888-exec-1 ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-10 16:05:20.453 INFO  8155 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-11-10 16:05:20.456 INFO  8158 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2023-11-10 16:05:20.548 INFO  8250 --- [ http-nio-8888-exec-1 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 16:05:22.843 WARN  10545 --- [ http-nio-8888-exec-1 ] o.a.c.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [151] milliseconds.
+2023-11-10 16:05:22.926 WARN  10628 --- [ http-nio-8888-exec-3 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 16:05:45.885 INFO  760  --- [ main ] c.study.hestudy.HestudyApplication - Starting HestudyApplication using Java 17.0.7 with PID 2428 (C:\develop\hestudy\HEstudy\hestudy\target\classes started by 82105 in C:\develop\hestudy\HEstudy\hestudy)
+2023-11-10 16:05:45.887 DEBUG 762  --- [ main ] c.study.hestudy.HestudyApplication - Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-11-10 16:05:45.888 INFO  763  --- [ main ] c.study.hestudy.HestudyApplication - No active profile set, falling back to 1 default profile: "default"
+2023-11-10 16:05:47.034 INFO  1909 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-11-10 16:05:47.043 INFO  1918 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-11-10 16:05:47.045 INFO  1920 --- [ main ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-11-10 16:05:47.045 INFO  1920 --- [ main ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-11-10 16:05:47.337 INFO  2212 --- [ main ] o.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-10 16:05:47.351 INFO  2226 --- [ main ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-11-10 16:05:47.352 INFO  2227 --- [ main ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1409 ms
+2023-11-10 16:05:47.630 INFO  2505 --- [ main ] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2023-11-10 16:05:47.683 DEBUG 2558 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.BoardController:
+	{GET [/boardList]}: BoardList()
+	{GET [/boardWrite]}: BoardWrite()
+2023-11-10 16:05:47.686 DEBUG 2561 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.PotoBoardController:
+	{GET [/potoBoardList]}: PotoBoardList()
+2023-11-10 16:05:47.687 DEBUG 2562 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.c.c.MainController:
+	{GET [/main || /]}: Main()
+2023-11-10 16:05:47.688 DEBUG 2563 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.r.c.registerController:
+	{GET [/signUp]}: SignUp()
+	{GET [/signIn]}: SignIN()
+2023-11-10 16:05:47.689 DEBUG 2564 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.SpringTestController:
+	{GET [/index]}: test()
+	{GET [/test]}: mvTest()
+2023-11-10 16:05:47.693 DEBUG 2568 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-11-10 16:05:47.704 DEBUG 2579 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+2023-11-10 16:05:47.725 DEBUG 2600 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /resources/static/**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-11-10 16:05:47.817 INFO  2692 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-11-10 16:05:47.872 INFO  2747 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-11-10 16:05:47.884 INFO  2759 --- [ main ] c.study.hestudy.HestudyApplication - Started HestudyApplication in 2.364 seconds (process running for 3.029)
+2023-11-10 16:05:51.330 INFO  6205 --- [ http-nio-8888-exec-1 ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-10 16:05:51.330 INFO  6205 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-11-10 16:05:51.332 INFO  6207 --- [ http-nio-8888-exec-1 ] o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-11-10 16:05:51.367 INFO  6242 --- [ http-nio-8888-exec-1 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 16:05:52.219 WARN  7094 --- [ http-nio-8888-exec-5 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 16:06:01.542 INFO  16417 --- [ http-nio-8888-exec-4 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 16:06:01.602 WARN  16477 --- [ http-nio-8888-exec-6 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 16:06:15.774 INFO  30649 --- [ http-nio-8888-exec-8 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 16:06:15.830 WARN  30705 --- [ http-nio-8888-exec-9 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 16:10:37.886 INFO  749  --- [ main ] c.study.hestudy.HestudyApplication - Starting HestudyApplication using Java 17.0.7 with PID 4648 (C:\develop\hestudy\HEstudy\hestudy\target\classes started by 82105 in C:\develop\hestudy\HEstudy\hestudy)
+2023-11-10 16:10:37.890 DEBUG 753  --- [ main ] c.study.hestudy.HestudyApplication - Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-11-10 16:10:37.892 INFO  755  --- [ main ] c.study.hestudy.HestudyApplication - No active profile set, falling back to 1 default profile: "default"
+2023-11-10 16:10:39.200 INFO  2063 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2023-11-10 16:10:39.208 INFO  2071 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2023-11-10 16:10:39.210 INFO  2073 --- [ main ] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-11-10 16:10:39.210 INFO  2073 --- [ main ] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.10]
+2023-11-10 16:10:39.519 INFO  2382 --- [ main ] o.apache.jasper.servlet.TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2023-11-10 16:10:39.532 INFO  2395 --- [ main ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-11-10 16:10:39.532 INFO  2395 --- [ main ] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1573 ms
+2023-11-10 16:10:39.831 INFO  2694 --- [ main ] o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2023-11-10 16:10:39.891 DEBUG 2754 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.BoardController:
+	{GET [/boardList]}: BoardList()
+	{GET [/boardWrite]}: BoardWrite()
+2023-11-10 16:10:39.893 DEBUG 2756 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.b.c.PotoBoardController:
+	{GET [/potoBoardList]}: PotoBoardList()
+2023-11-10 16:10:39.893 DEBUG 2756 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.c.c.MainController:
+	{GET [/main || /]}: Main()
+2023-11-10 16:10:39.894 DEBUG 2757 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.r.c.registerController:
+	{GET [/signUp]}: SignUp()
+	{GET [/signIn]}: SignIN()
+2023-11-10 16:10:39.894 DEBUG 2757 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	c.s.h.SpringTestController:
+	{GET [/index]}: test()
+	{GET [/test]}: mvTest()
+2023-11-10 16:10:39.899 DEBUG 2762 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error]}: error(HttpServletRequest)
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+2023-11-10 16:10:39.909 DEBUG 2772 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'beanNameHandlerMapping' {}
+2023-11-10 16:10:39.935 DEBUG 2798 --- [ main ] _.s.w.s.HandlerMapping.Mappings - 'resourceHandlerMapping' {/webjars/**=ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]], /resources/static/**=ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]}
+2023-11-10 16:10:40.074 INFO  2937 --- [ main ] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2023-11-10 16:10:40.138 INFO  3001 --- [ main ] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2023-11-10 16:10:40.155 INFO  3018 --- [ main ] c.study.hestudy.HestudyApplication - Started HestudyApplication in 2.629 seconds (process running for 3.317)
+2023-11-10 16:10:42.867 INFO  5730 --- [ http-nio-8888-exec-2 ] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-11-10 16:10:42.867 INFO  5730 --- [ http-nio-8888-exec-2 ] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-11-10 16:10:42.868 INFO  5731 --- [ http-nio-8888-exec-2 ] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-11-10 16:10:42.913 INFO  5776 --- [ http-nio-8888-exec-2 ] o.s.stereotype.Controller - SignUpController ###
+2023-11-10 16:10:43.766 WARN  6629 --- [ http-nio-8888-exec-3 ] o.s.web.servlet.PageNotFound - No mapping for GET /favicon.ico
+2023-11-10 16:17:58.033 WARN  440896 --- [ http-nio-8888-exec-6 ] o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
